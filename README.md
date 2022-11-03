@@ -1,2 +1,3 @@
 ### Simple Web Projects
-- can be viewed [here](https://davidk55.github.io/simple-web-projects/)
+
+- can be viewed [here](https://simple-web-projects-davidk55.netlify.app/)
