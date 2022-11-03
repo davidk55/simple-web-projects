@@ -1,135 +1,26 @@
-/* ========== FONTS ========== */
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-/* ========== VARIABLES ========== */
-:root {
-  --dark-black: #282828;
-  --normal-black: #333232;
-  --creamy-white: #ebdbb2;
-  --light-blue: #67BECE;
-  --dark-blue: #83a598;
-  --light-green: #b8bb26;
-}
-
-/* ========== BASE STYLING ========== */
-html {
-  box-sizing: border-box;
-  background-color: var(--dark-black);
-  color: var(--creamy-white);
-  font-family: 'Roboto', sans-serif;
-}
-*, *::before, *::after {
-  box-sizing: border-box;
-}
-
-/* ========== MAIN STYLING ========== */
-
-body {
-  display: flex;
-  flex-flow: column;
-  align-items: center;
-  justify-content: space-between;
-  min-height: 100vh;
-}
-
-footer p {
-  margin-top: 10rem;
-
-}
-
-footer p a {
-  color: var(--light-blue);
-  text-decoration: none;
-}
-
-h1 {
-  text-align: center;
-  margin: 100px;
-  line-height: 1.5;
-  letter-spacing: 1px;
-}
-
-.year {
-  margin: 50px 0 50px -63%;
-}
-
-main {
-  display: flex;
-  align-items: center;
-  max-width: 70%;
-  gap: 80px;
-  margin: 0 auto;
-  flex-direction: row;
-  flex-wrap: wrap;
+@layer base {
+  @font-face {
+    font-family: 'Roboto';
+    font-weight: 400;
+    src: url('./assets/fonts/Roboto-Regular.ttf');
+  }
+  @font-face {
+    font-family: 'Roboto';
+    font-weight: 700;
+    src: url('./assets/fonts/Roboto-Bold.ttf');
+  }
 }
 
 .card {
-  padding: 10px 40px;
-  border-radius: 10px;
-  width: 270px;
-  height: 310px;
-  background: linear-gradient(to top right,#0000 50%,rgba(60, 56, 54, .8) 50.1%) top right/60px 60px no-repeat, var(--normal-black);
-}
-
-
-.card__title {
-  margin: 20px 0;
-  text-align: center;
-  line-height: 1.6;
-}
-
-.card__github {
-  float: right;
-  margin-right: -35px;
-  margin-top: -5px;
-}
-
-.card__frontendmentor {
-  text-decoration: none;
-  color: var(--light-blue);
-}
-.card__frontendmentor:hover {
-  text-decoration: underline;
-}
-
-.card__image {
-  width: 192px;
-  height: 108px;
-  background-color: white;
-  border-radius: 10px;
-  margin: 20px auto;
-  margin-top: 0;
-}
-
-.git {
-  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(9deg) brightness(102%) contrast(101%);
-}
-
-.card__tags {
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
-}
-
-.card__tag {
-  background-color: var(--dark-black);
-  border-radius: 5px;
-  padding: 3px 6px;
-  color: var(--creamy-white);
-  font-size: 10px;
-}
-
-.card__btn {
-  all: unset;
-  background-color: var(--dark-blue);
-  border-radius: 5px;
-  padding: 5px 12px;
-  font-size: 14px;
-  margin-top: 22px;
-  cursor:pointer;
-}
-
-.card__btn:active {
-  background-color: var(--creamy-white);
-  color: var(--dark-blue);
+  background: linear-gradient(
+        to top right,
+        #0000 50%,
+        rgba(60, 56, 54, 0.8) 50.1%
+      )
+      top right/60px 60px no-repeat,
+    #333232;
 }
